@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Stars School Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="decor decor-one">☁️</div><div class="decor decor-two">⭐</div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-wrap" id="logoPreview">🌈</div>
+      <div><div class="school-name" id="schoolName">Little Stars Kindergarten</div><div class="school-tag">LEARN • PLAY • GROW</div></div>
+    </div>
+    <div class="top-actions"><button class="small-btn" id="editBrandBtn">⚙ School setup</button><span class="today" id="todayLabel"></span></div>
+  </header>
+
+  <main>
+    <section id="homeView" class="view active">
+      <div class="welcome">
+        <div><span class="eyebrow">WELCOME TO YOUR SCHOOL PORTAL</span><h1>A happy place to <span>learn & grow!</span></h1>
+        <p>Everything your little school needs, in one cheerful place.</p></div>
+        <div class="welcome-art"><span class="sun">☀️</span><span class="rainbow">🌈</span><span class="bear">🐻</span><span class="flower">🌼</span></div>
+      </div>
+      <div class="role-grid">
+        <button class="role-card admin-card" data-role="admin"><span class="role-emoji">🧑‍💼</span><span class="role-title">Admin</span><span class="role-desc">Manage school, staff & reports</span><span class="go">Open dashboard →</span></button>
+        <button class="role-card teacher-card" data-role="teacher"><span class="role-emoji">👩‍🏫</span><span class="role-title">Teacher</span><span class="role-desc">Classes, attendance & daily progress</span><span class="go">Open classroom →</span></button>
+        <button class="role-card student-card" data-role="student"><span class="role-emoji">🎒</span><span class="role-title">Students</span><span class="role-desc">View attendance, fees & growth</span><span class="go">View student area →</span></button>
+      </div>
+      <div class="home-note"><span>🧸</span><div><b>Small steps make big dreams!</b><p>A friendly digital home for your school community.</p></div><span class="note-stars">✦ ✧ ✦</span></div>
+    </section>
+
+    <section id="loginView" class="view">
+      <button class="back-link" data-back>← Back home</button>
+      <div class="login-card">
+        <div class="login-emoji" id="loginEmoji">🔐</div><span class="eyebrow" id="loginEyebrow">SECURE ACCESS</span>
+        <h2 id="loginTitle">Admin Login</h2><p id="loginText">Enter your password to continue.</p>
+        <form id="loginForm"><label for="passwordInput">Password</label><input id="passwordInput" type="password" placeholder="Enter password" autocomplete="current-password" required><button class="primary-btn" type="submit">Continue <span>→</span></button></form>
+        <div class="login-error" id="loginError"></div>
+      </div>
+    </section>
+
+    <section id="adminView" class="view">
+      <div class="section-head"><div><span class="eyebrow">SCHOOL CONTROL CENTRE</span><h2>Admin dashboard <span>🧑‍💼</span></h2><p>Manage your team, classes, calendar and school records.</p></div><button class="outline-btn" data-home>↩ Exit dashboard</button></div>
+      <div class="stats-grid" id="adminStats"></div>
+      <div class="tabs" id="adminTabs">
+        <button class="tab active" data-tab="overview">Overview</button><button class="tab" data-tab="teachers">Teachers & salary</button><button class="tab" data-tab="students">Students & results</button><button class="tab" data-tab="classes">Class setup</button><button class="tab" data-tab="calendar">Calendar</button>
+      </div>
+      <div id="adminPanel" class="panel"></div>
+    </section>
+
+    <section id="teacherView" class="view">
+      <div class="section-head"><div><span class="eyebrow">YOUR CLASSROOM</span><h2>Teacher space <span>🍎</span></h2><p>Choose your allocated class to manage today's learning.</p></div><button class="outline-btn" data-home>↩ Exit</button></div>
+      <div id="teacherPanel" class="panel"></div>
+    </section>
+
+    <section id="studentView" class="view">
+      <div class="section-head"><div><span class="eyebrow">LITTLE LEARNERS</span><h2>Student overview <span>🎒</span></h2><p>View student attendance, fee status and learning progress.</p></div><button class="outline-btn" data-home>↩ Exit</button></div>
+      <div id="studentPanel" class="panel"></div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" id="modalContent"></div></div>
+  <footer>Made with 💛 for little learners <span>•</span> Little Stars School Portal</footer>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/supabase.js"></script>
+    <script src="js/config.js"></script>
+
+</body>
+</html>
